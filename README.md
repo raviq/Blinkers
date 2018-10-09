@@ -19,6 +19,6 @@ $ ./spikers
 
 
 ## Licence & Copyright
-This software was developed in the hope that it would be of some use to the AI research community, and is freely available for redistribution and/or modification under the terms of the GNU General Public Licence. It is distributed WITHOUT WARRANTY; without even the implied warranty of merchantability or fitness for a particular purpose. See the [GNU General Public License] for more details. 
+This software was developed in the hope that it would be of some use to the AI research community, and is freely available for redistribution and/or modification under the terms of the GNU General Public Licence. It is distributed WITHOUT WARRANTY; without even the implied warranty of merchantability or fitness for a particular purpose. See the [GNU General Public License](https://github.com/raviq/Blinkers/blob/master/LICENCE.md) for more details. 
 
 Copyright (c) 2015--2018 Rafik Hadfi.
