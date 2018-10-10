@@ -20,7 +20,7 @@ $ qmake blinkers.pro
 
 $ make
 
-$ ./spikers
+$ ./blinkers
 ```
 
 
