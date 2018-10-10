@@ -2,6 +2,11 @@
 
 Threaded agents that autonomously update their states and observe other agents' states.
 
+Example with 4 agents:
+
+<p align="center">
+	<img src="https://github.com/raviq/Blinkers/blob/master/images/screen_shot.png" width="500">
+</p>
 
 ## Prerequisites:
 
