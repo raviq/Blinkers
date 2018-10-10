@@ -5,7 +5,7 @@ Threaded agents that autonomously update their states and observe other agents' 
 Example with 4 agents:
 
 <p align="center">
-	<img src="https://github.com/raviq/Blinkers/blob/master/screen_shot.png" width="500">
+	<img src="https://github.com/raviq/Blinkers/blob/master/screen_shot.png" width="700">
 </p>
 
 
