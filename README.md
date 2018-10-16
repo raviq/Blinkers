@@ -1,5 +1,8 @@
 # Blinkers
 
+[![Build Status](https://travis-ci.org/{raviq}/{Blinkers}.png?branch=master)](https://travis-ci.org/{raviq}/{Blinkers})
+
+
 Threaded agents that autonomously update their states and observe other agents' states.
 
 Example with 4 agents:
