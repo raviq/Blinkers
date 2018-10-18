@@ -15,7 +15,7 @@ Worker::~Worker()
 // Start processing data.
 void Worker::process()
 {
-    // TODO should be in different threat, with n-1 others monitoring the other cells?
+    // TODO should be in different thread, with n-1 others monitoring the other cells?
     // or simply updated from one source?
 
     // min and max waiting time in msec
