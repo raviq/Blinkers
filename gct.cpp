@@ -1,14 +1,12 @@
 // T test statistics for Granger causality Test
 
 
-#include "gct.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "gct.h"
 
 #define max(a,b)	a>b?a:b
-
 
 GCT::GCT()
 {

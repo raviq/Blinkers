@@ -16,8 +16,6 @@ MainWindow::MainWindow(QWidget *parent, int numberFrames) : QMainWindow(parent),
     loadGUI();
 }
 
-//================================================================================================
-
 void MainWindow::loadGUI()
 {
     pheno = new CLogBook** [numFrames];
@@ -54,21 +52,18 @@ void MainWindow::loadGUI()
          blinkerLayout->addWidget(frame[i]); // the colorful tile;
          blinkerLayout->addStretch();
 
-         /*
          // init the H value and its label
-         m_hAgent[i] = 0.0;
-         m_hAgentLabel = new QLabel("  H = " + QString::number(m_hAgent[i]));
-         blinkerLayout->addWidget(m_hAgentLabel);
-        */
+         //m_hAgent[i] = 0.0;
+         //m_hAgentLabel = new QLabel("  H = " + QString::number(m_hAgent[i]));
+         //blinkerLayout->addWidget(m_hAgentLabel);
+
          // adding the blinker tile and the label
 
          layout[i]->addItem(blinkerLayout);
          layout[i]->addRow(new QLabel(""));
 
-
          QFormLayout* actionsLayout = new QFormLayout;
          actionsGroupBox[i] = new QGroupBox("Internal generative model of actions");
-
 
          actionsLayout->addRow(new QLabel("   Time  \t " + QString::number(i) + "'s action"));
          FrameEditor[i] = new CLogBook;
@@ -121,11 +116,11 @@ void MainWindow::loadGUI()
     mainLayout->addLayout(btnLayout);
     centralWidget()->setLayout(mainLayout);
 
-//=== Setting Threads ======================================================================================
-    /* A QThread should be used much like a regular thread instance: prepare an object (QObject) class with all your desired
-     * functionality in it. Then create a new QThread instance, push the QObject onto it using moveToThread(QThread*) of the QObject
-     * instance and call start() on the QThread instance. That’s all. You set up the proper signal/slot connections to make it quit
-     * properly and such, and that’s all. https://mayaposch.wordpress.com/2011/11/01/how-to-really-truly-use-qthreads-the-full-explanation/ */
+    // Setting Threads
+    // A QThread should be used much like a regular thread instance: prepare an object (QObject) class with all your desired
+    // functionality in it. Then create a new QThread instance, push the QObject onto it using moveToThread(QThread*) of the QObject
+    // instance and call start() on the QThread instance. That’s all. You set up the proper signal/slot connections to make it quit
+    // properly and such, and that’s all. https://mayaposch.wordpress.com/2011/11/01/how-to-really-truly-use-qthreads-the-full-explanation/ */
 
     for (int i = 0 ; i < numFrames ; i++)
     {
@@ -142,10 +137,10 @@ void MainWindow::loadGUI()
         // connects the thread’s started() signal to the processing() slot in the worker, causing it to start.
         connect(thread[i], SIGNAL(started()), worker[i], SLOT(process()));
 
-        /* Then the clean-up: when the worker instance emits finished(), as we did in the example, it will signal the thread to quit, i.e.
-         * shut down. We then mark the worker instance using the same finished() signal for deletion. Finally, to prevent nasty crashes
-         * because the thread hasn’t fully shut down yet when it is deleted, we connect the finished() of the thread (not the worker!)
-         * to its own deleteLater() slot. This will cause the thread to be deleted only after it has fully shut down.  */
+        // Then the clean-up: when the worker instance emits finished(), as we did in the example, it will signal the thread to quit, i.e.
+        // shut down. We then mark the worker instance using the same finished() signal for deletion. Finally, to prevent nasty crashes
+        // because the thread hasn’t fully shut down yet when it is deleted, we connect the finished() of the thread (not the worker!)
+        // to its own deleteLater() slot. This will cause the thread to be deleted only after it has fully shut down.  */
 
         connect(worker[i], SIGNAL(finished()), thread[i], SLOT(quit()));
         connect(worker[i], SIGNAL(finished()), worker[i], SLOT(deleteLater()));
@@ -167,12 +162,10 @@ void MainWindow::loadGUI()
 
 }
 
-//================================================================================================
 void MainWindow::errorString(QString s)
 {
     qDebug() << this->QObject::thread()->currentThreadId() << ": Error :" << s;
 }
-//================================================================================================
 
 // A slot is called when a signal connected to it is emitted
 // i: indexed of the currently updated frame
@@ -199,7 +192,6 @@ void MainWindow::updateFrameEditor(QColor color, int i)
           pheno[j][i]->highlight(QColor(0,0,0), color, 150);
        }
 }
-//================================================================================================
 
 void MainWindow::showFaces()
 {
@@ -219,21 +211,16 @@ void MainWindow::showActions()
         actionsGroupBox[i]->setVisible(checkBox2->isChecked());
 }
 
-//================================================================================================
-
 void MainWindow::On_LearnButtonClicked()
 {
     qDebug() << "LearnButton Clicked";
 }
-//================================================================================================
 
 void MainWindow::On_quiButtonClicked()
 {
     qDebug() << "CancelButton Clicked. Quitting.";
     qApp->exit();
 }
-
-//================================================================================================
 
 MainWindow::~MainWindow()
 {

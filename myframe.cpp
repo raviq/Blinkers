@@ -24,41 +24,37 @@ QColor COLOR_CODES [] = { // http://www.rapidtables.com/web/color/RGB_Color.htm
 //=======================================================================================================================
 MyFrame::MyFrame(QWidget *parent) :  QFrame(parent), ui(new Ui::MyFrame)
 {
-    /*
-    QPainterPath path;
-    path.addRoundedRect(QRectF(20, 20, 20, 20), 10, 10);
-    QRegion region = QRegion(path.toFillPolygon().toPolygon());
-    setMask(region);
-*/
+//    QPainterPath path;
+//    path.addRoundedRect(QRectF(20, 20, 20, 20), 10, 10);
+//    QRegion region = QRegion(path.toFillPolygon().toPolygon());
+//    setMask(region);
 
-/*
-    QPalette Pal(palette());
-   QPixmap* pixmap = new QPixmap("/new/prefix1/images/smiley1.jpeg");
-    Pal.setBrush(QPalette::Background, QBrush(*pixmap));
-    //setAutoFillBackground(true);
-    setPalette(Pal);
-*/
-/*
-    QPalette Pal(palette());
-    pal.setBrush( backgroundRole(), QBrush( QImage("/new/prefix1/images/smiley1.jpeg") ) );
-    setPalette(pal);
-*/
+//    QPalette Pal(palette());
+//    QPixmap* pixmap = new QPixmap("/new/prefix1/images/smiley1.jpeg");
+//    Pal.setBrush(QPalette::Background, QBrush(*pixmap));
+//    //setAutoFillBackground(true);
+//    setPalette(Pal);
+
+//    QPalette Pal(palette());
+//    pal.setBrush( backgroundRole(), QBrush( QImage("/new/prefix1/images/smiley1.jpeg") ) );
+//    setPalette(pal);
+
     setColor(Qt::white);
     setFrameStyle(QFrame::Box);
     setFixedSize(50, 50);
 }
 
-//=======================================================================================================================
+
 QColor MyFrame::getFrameColor()
 {
     return FrameColor;
 }
-//=======================================================================================================================
+
 const char* MyFrame::getFrameColorName()
 {
     return FrameColorName;
 }
-//=======================================================================================================================
+
 void MyFrame::setColor(QColor qtcolor)
 {
     // Set initial color: white.
@@ -68,7 +64,6 @@ void MyFrame::setColor(QColor qtcolor)
     setAutoFillBackground(true);
     setPalette(Pal);
 }
-//=======================================================================================================================
 
 void MyFrame::randomizeColor(int i)
 {
@@ -81,8 +76,6 @@ void MyFrame::randomizeColor(int i)
 
     emit frameColorChanged(FrameColor, i);
 }
-//=======================================================================================================================
-
 
 MyFrame::~MyFrame()
 {
