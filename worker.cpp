@@ -15,20 +15,14 @@ Worker::~Worker()
 // Start processing data.
 void Worker::process()
 {
-<<<<<<< HEAD
-    // TODO should be in different thread, with n-1 others monitoring the other cells?
-    // or simply updated from one source?
-=======
     // TODO should be in different thread, with n-1 others monitoring the other cells or simply updated from one source.
->>>>>>> 0008b35d77d91f691c048df8ef08ce5b9fbb4de3
-
     // min and max waiting time in msec
     float min_wmsec = 0;
     float max_wmsec = 1000;
 
     for (float dt = 0.0; ; dt = random(min_wmsec, max_wmsec))
     {
-         //   dt = 2000; // forcing the periods to be synchronous
+       //   dt = 2000; // forcing the periods to be synchronous
 
        // Ask myframe to set its color to random myframe will set its color to random, emit frameColorChanged,
        // and notify thread with the new color, running notif()
