@@ -15,8 +15,12 @@ Worker::~Worker()
 // Start processing data.
 void Worker::process()
 {
+<<<<<<< HEAD
     // TODO should be in different thread, with n-1 others monitoring the other cells?
     // or simply updated from one source?
+=======
+    // TODO should be in different thread, with n-1 others monitoring the other cells or simply updated from one source.
+>>>>>>> 0008b35d77d91f691c048df8ef08ce5b9fbb4de3
 
     // min and max waiting time in msec
     float min_wmsec = 0;
@@ -26,11 +30,10 @@ void Worker::process()
     {
          //   dt = 2000; // forcing the periods to be synchronous
 
-       // ask myframe to set its color to random myframe will set its color to random, emit frameColorChanged,
+       // Ask myframe to set its color to random myframe will set its color to random, emit frameColorChanged,
        // and notify thread with the new color, running notif()
         myframe->randomizeColor(index);
         //qDebug() << this->thread()->currentThreadId() << "   " << QTime::currentTime().toString() << "    dt = " << dt;
-
         // then, wait for dt, before notifying asking frame again to randomize its colors
         Sleeper::msleep(dt);
     }
