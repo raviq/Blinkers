@@ -1,12 +1,10 @@
-QT += core
+
+QT += core widgets
 QT -= gui
-
-QT += widgets
-
 
 CONFIG += c++11
 
-TARGET = spikers
+TARGET = blinkers
 CONFIG += console
 CONFIG -= app_bundle
 
