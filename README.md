@@ -16,9 +16,7 @@ Qt 5
 
 ```sh
 $ qmake blinkers.pro
-
 $ make
-
 $ ./blinkers
 ```
 
