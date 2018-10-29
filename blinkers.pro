@@ -11,12 +11,12 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    worker.cpp \
-    myframe.cpp \
-    clogbook.cpp \
-    gct.cpp \
-    mainwindow.cpp \
-    myqtextedit.cpp
+    src/worker.cpp \
+    src/myframe.cpp \
+    src/clogbook.cpp \
+    src/gct.cpp \
+    src/mainwindow.cpp \
+    src/myqtextedit.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -30,12 +30,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 HEADERS += \
-    worker.h \
-    utils.h \
-    myframe.h \
-    clogbook.h \
-    gct.h \
-    mainwindow.h \
-    myqtextedit.h \
-    ui_myframe.h \
-    ui_mainwindow.h
+    src/worker.h \
+    src/utils.h \
+    src/myframe.h \
+    src/clogbook.h \
+    src/gct.h \
+    src/mainwindow.h \
+    src/myqtextedit.h \
+    src/ui_myframe.h \
+    src/ui_mainwindow.h

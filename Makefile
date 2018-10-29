@@ -232,7 +232,6 @@ DIST          = /usr/local/Cellar/qt/5.11.2/mkspecs/features/spec_pre.prf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/toolchain.prf \
@@ -454,7 +453,6 @@ Makefile: blinkers.pro /usr/local/Cellar/qt/5.11.2/mkspecs/macx-clang/qmake.conf
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/5.11.2/mkspecs/features/toolchain.prf \
@@ -647,7 +645,6 @@ Makefile: blinkers.pro /usr/local/Cellar/qt/5.11.2/mkspecs/macx-clang/qmake.conf
 /usr/local/Cellar/qt/5.11.2/mkspecs/features/qt_config.prf:
 /usr/local/Cellar/qt/5.11.2/mkspecs/macx-clang/qmake.conf:
 /usr/local/Cellar/qt/5.11.2/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /usr/local/Cellar/qt/5.11.2/mkspecs/features/exclusive_builds.prf:
 /usr/local/Cellar/qt/5.11.2/mkspecs/features/mac/sdk.prf:
 /usr/local/Cellar/qt/5.11.2/mkspecs/features/toolchain.prf:
@@ -704,7 +701,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
