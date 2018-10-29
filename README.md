@@ -1,4 +1,4 @@
-# Blinkers [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+# Blinkers [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [<img alt="Build Status" src="https://travis-ci.org/raviq/Blinkers.svg?branch=master">][travis-url]
 
 Threaded agents that autonomously update their states and observe other agents' states.
 
@@ -25,3 +25,6 @@ This software was developed in the hope that it would be of some use to the AI r
 If you find this code to be of any use, please let me know. I would also welcome any feedback.
 
 Copyright (c) 2018 Rafik Hadfi, rafik.hadfi@gmail.com
+
+[travis-url]: https://travis-ci.org/raviq/Blinkers
+
