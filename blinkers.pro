@@ -8,9 +8,17 @@ TARGET = blinkers
 CONFIG += console
 CONFIG -= app_bundle
 
+# Build
+OBJECTS_DIR = $$PWD/build/obj # Intermediate object files directory
+MOC_DIR = $$PWD/build/obj     # Intermediate moc files directory
+UI_DIR  = $$PWD/build/obj     # UI files
+RCC_DIR = $$PWD/build/obj     # Resources
+DESTDIR = $$PWD/build         # Target file directory
+
+
 TEMPLATE = app
 
-SOURCES += main.cpp \
+SOURCES += src/main.cpp \
     src/worker.cpp \
     src/myframe.cpp \
     src/clogbook.cpp \
