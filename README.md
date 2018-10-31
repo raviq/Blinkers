@@ -1,4 +1,4 @@
-# Blinkers [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [<img alt="Build Status" src="https://travis-ci.org/raviq/Blinkers.svg?branch=master">][travis-url] [![HitCount](http://hits.dwyl.io/raviq/Blinkers.svg)](http://hits.dwyl.io/raviq/Blinkers)
+# Blinkers [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [<img alt="Build Status" src="https://travis-ci.org/raviq/Blinkers.svg?branch=master">][travis-url]
 
 Threaded agents that autonomously update their states and observe other agents' states.
 
